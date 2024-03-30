@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-device LLM Inference</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding-top: 20px; /* Added padding at the top */
+            height: auto; /* Changed to auto for dynamic content sizing */
+            min-height: 100vh; /* Ensure it covers at least the full viewport height */
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            max-width: 640px; /* Adjusted for better control over max width */
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%; /* Full width of the container */
+            height: 200px; /* Height adjusted for paragraphs */
+            margin: 10px 0;
+            padding: 15px; /* More padding for better readability */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: inherit;
+            font-size: 16px;
+            resize: vertical; /* Users can adjust the vertical size */
+        }
+        input[type="button"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+        input[type="button"]:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>On-device LLM Inference</h1>
+        <label for="input">Input:</label><br />
+        <textarea id="input"></textarea><br />
+        <input type="button" id="submit" value="Get Response" disabled /><br />
+        <br />
+        <label for="output">Result:</label><br />
+        <textarea id="output"></textarea>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
